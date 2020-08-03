@@ -14,6 +14,8 @@ now = time.strftime('%Y%m%d_%H%M%S', time.localtime())
 log_file = os.path.join(prj_path, 'log','log_{}.txt'.format(today))  # # 更改路径到log目录下
 report_file = os.path.join(prj_path, 'report','report_{}.html'.format(now))  # 更改路径到report目录下
 
+test_list_file=os.path.join(test_path,'testlist.txt')
+
 # log配置
 logging.basicConfig(level=logging.DEBUG,  # log level
                     format='[%(asctime)s] %(levelname)s [%(funcName)s: %(filename)s, %(lineno)d] %(message)s',  # log格式

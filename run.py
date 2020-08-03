@@ -7,10 +7,12 @@ from lib.HTMLTestReportCN import HTMLTestRunner
 from act.suite.demo_suite import get_suite
 
 
-
-
 def discover():
-    return unittest.defaultTestLoader.discover(test_path)
+    try:
+        print("测试用例路径"+test_path)
+        return unittest.defaultTestLoader.discover(test_path)
+    except Exception as e:
+        print(str(e))
 
 
 def run(suite):

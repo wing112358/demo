@@ -1,0 +1,35 @@
+[2020-08-03 11:01:07] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 324b8fae-9234-4ca3-ad64-2735603c07d1.mock.pstmn.io:443
+[2020-08-03 11:01:13] DEBUG [_make_request: connectionpool.py, 433] https://324b8fae-9234-4ca3-ad64-2735603c07d1.mock.pstmn.io:443 "GET /api/demo/gettest?id=23&type=2 HTTP/1.1" 200 108
+[2020-08-03 11:01:13] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 324b8fae-9234-4ca3-ad64-2735603c07d1.mock.pstmn.io:443
+[2020-08-03 11:01:20] DEBUG [_make_request: connectionpool.py, 433] https://324b8fae-9234-4ca3-ad64-2735603c07d1.mock.pstmn.io:443 "POST /api/demo/posttest HTTP/1.1" 200 110
+[2020-08-03 11:06:21] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443
+[2020-08-03 11:06:23] DEBUG [_make_request: connectionpool.py, 433] https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443 "GET /api/demo/gettest?id=23&type=2 HTTP/1.1" 200 111
+[2020-08-03 11:06:23] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443
+[2020-08-03 11:06:25] DEBUG [_make_request: connectionpool.py, 433] https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443 "POST /api/demo/posttest HTTP/1.1" 200 113
+[2020-08-03 11:06:25] INFO [log_case_info: case_log.py, 7] 测试用例：test_demo_post_normal
+[2020-08-03 11:06:25] INFO [log_case_info: case_log.py, 8] url：https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io/api/demo/posttest
+[2020-08-03 11:06:25] INFO [log_case_info: case_log.py, 9] 请求参数：{"code ": 1000, "data ": {"age": "18", "name": "大白", "sex": "female"}, "msg ": "调用成功 "}
+[2020-08-03 11:06:25] INFO [log_case_info: case_log.py, 10] 期望结果：{"id":"12345","type":"1"}
+[2020-08-03 11:06:25] INFO [log_case_info: case_log.py, 11] 实际结果：{"code ": 1000, "data ": {"age": "18", "name": "\u5927\u767d", "sex": "female"}, "msg ": "\u8c03\u7528\u6210\u529f "}
+
+
+
+[2020-08-03 11:07:57] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443
+[2020-08-03 11:08:01] DEBUG [_make_request: connectionpool.py, 433] https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443 "GET /api/demo/gettest?id=23&type=2 HTTP/1.1" 200 111
+[2020-08-03 11:08:01] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443
+[2020-08-03 11:08:14] DEBUG [_make_request: connectionpool.py, 433] https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443 "POST /api/demo/posttest HTTP/1.1" 200 113
+[2020-08-03 11:08:14] INFO [log_case_info: case_log.py, 7] 测试用例：test_demo_post_normal
+[2020-08-03 11:08:14] INFO [log_case_info: case_log.py, 8] url：https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io/api/demo/posttest
+[2020-08-03 11:08:14] INFO [log_case_info: case_log.py, 9] 请求参数：{"code ": 1000, "data ": {"age": "18", "name": "大白", "sex": "female"}, "msg ": "调用成功 "}
+[2020-08-03 11:08:14] INFO [log_case_info: case_log.py, 10] 期望结果：{"id":"12345","type":"1"}
+[2020-08-03 11:08:14] INFO [log_case_info: case_log.py, 11] 实际结果：{"code ": 1000, "data ": {"age": "18", "name": "\u5927\u767d", "sex": "female"}, "msg ": "\u8c03\u7528\u6210\u529f "}
+[2020-08-03 11:13:20] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443
+[2020-08-03 11:13:34] DEBUG [_make_request: connectionpool.py, 433] https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443 "POST /api/demo/posttest HTTP/1.1" 200 113
+[2020-08-03 11:14:14] DEBUG [_new_conn: connectionpool.py, 937] Starting new HTTPS connection (1): 0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443
+[2020-08-03 11:14:16] DEBUG [_make_request: connectionpool.py, 433] https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io:443 "POST /api/demo/posttest HTTP/1.1" 200 113
+[2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 7] 测试用例：test_demo_post_normal
+[2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 8] url：https://0476fbb6-c437-444d-83c2-e6b6b8bb4391.mock.pstmn.io/api/demo/posttest
+[2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 9] 请求参数：{"id":"12345","type":"1"}
+[2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 10] 期望结果：{"code ": 1000, "data ": {"age": "18", "name": "\u5927\u767d", "sex": "female"}, "msg ": "\u8c03\u7528\u6210\u529f "}
+[2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 11] 实际结果：{"code ": 1000, "data ": {"age": "18", "name": "大白", "sex": "female"}, "msg ": "调用成功 "}
+[2020-08-03 11:18:30] INFO [<module>: config.py, 48] hello

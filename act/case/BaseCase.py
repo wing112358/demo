@@ -20,7 +20,7 @@ class BaseCase(unittest.TestCase):   # 继承unittest.TestCase
     def send_request(self, case_data):
         case_name = case_data.get('case_name')
         url = case_data.get('url')
-        args = case_data.get('args')
+        args = case_data.get('data')
         headers = case_data.get('headers')
         expect_res = case_data.get('expect_res')
         method = case_data.get('method')
@@ -35,6 +35,5 @@ class BaseCase(unittest.TestCase):   # 继承unittest.TestCase
             self.assertEqual(res.text, expect_res)
         else:
             res = requests.post(url=url, json=json.loads(args), headers=json.loads(headers))   # JSON格式请求
-            log_case_info(case_name, url, args, json.dumps(json.loads(expect_res), sort_keys=True),
-                          json.dumps(res.json(), ensure_ascii=False, sort_keys=True))
+            log_case_info(case_name, url, json.dumps(json.loads(expect_res), sort_keys=True),json.dumps(res.json(), ensure_ascii=False, sort_keys=True),args)
             self.assertDictEqual(res.json(), json.loads(expect_res))

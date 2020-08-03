@@ -2,8 +2,10 @@ import unittest
 import requests
 import os  # 增加了一个os，需要用来组装路径
 import sys
-sys.path.append("../..")  # 提升2级到项目根目录下
-from lib.read_excel import *  #导入读excel的方法
+from lib.read_excel import *    #导入读excel的方法
+sys.path.append("../..")      # 提升2级到项目根目录下
+
+
 from lib.case_log import *
 
 from act.case.BaseCase import *
@@ -16,11 +18,11 @@ class TestDemo(BaseCase):
 
 
     def test_demo_post_normal(self):
-        case_data =self.get_test_data("test_demo_post_normal")
+        case_data =self.get_case_data("test_demo_post_normal")
         self.send_request(case_data)
 
     def test_demo_get_normal(self):
-        case_data = self.get_test_data("test_demo_get_normal")
+        case_data = self.get_case_data("test_demo_get_normal")
         self.send_request(case_data)
 
 

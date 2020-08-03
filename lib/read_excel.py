@@ -1,5 +1,8 @@
 import xlrd
 
+
+
+
 def excel_to_list(data_file, sheet):
     data_list = []  # 新建个空列表，来乘装所有的数据
     wb = xlrd.open_workbook(data_file)  # 打开excel
@@ -14,7 +17,7 @@ def get_test_data(data_list, case_name):
     for case_data in data_list:
         if case_name == case_data['case_name']:  # 如果字典数据中case_name与参数一致
             return case_data
-            # 如果查询不到会返回None
+                # 如果查询不到会返回None
 
 if __name__ == '__main__':   # 测试一下自己的代码
     data_list = excel_to_list("../data/test_demo_data.xlsx", "TestDemo")  # 读取excel，TestDemo工作簿的所有数据
