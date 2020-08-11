@@ -1,14 +1,14 @@
+import sys
 import unittest
 import requests
 import os  # 增加了一个os，需要用来组装路径
-import sys
 from lib.read_excel import *    #导入读excel的方法
 sys.path.append("../..")      # 提升2级到项目根目录下
 
 
 from lib.case_log import *
 
-from act.case.BaseCase import *
+from act.case.basecase import *
 
 class TestDemo(BaseCase):
 

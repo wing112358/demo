@@ -1,20 +1,25 @@
 import logging
 import os
 import time
-
-# 项目路径
-prj_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 当前文件的上一级的上一级目录（增加一级）__file__指当前文件
-
-data_path = os.path.join(prj_path,'data')  # 数据目录
-test_path = os.path.join(prj_path,'act')  # 用例目录
+from optparse import OptionParser
 
 today = time.strftime('%Y%m%d', time.localtime())
 now = time.strftime('%Y%m%d_%H%M%S', time.localtime())
 
+# 项目路径
+prj_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 当前文件的上一级的上一级目录（增加一级）__file__指当前文件
+
+test_path = os.path.join(prj_path,'act','case','onecase')  # 用例目录
+
 log_file = os.path.join(prj_path, 'log','log_{}.txt'.format(today))  # # 更改路径到log目录下
 report_file = os.path.join(prj_path, 'report','report_{}.html'.format(now))  # 更改路径到report目录下
 
+
+data_path = os.path.join(prj_path,'data')  # 数据目录
+
 test_list_file=os.path.join(test_path,'testlist.txt')
+
+last_fails_file = os.path.join(prj_path, 'last_failures.pickle')
 
 # log配置
 logging.basicConfig(level=logging.DEBUG,  # log level
@@ -43,5 +48,13 @@ receiver = 'wangt@shumei.ai'  # 收件人
 subject = '接口测试报告'  # 邮件主题
 
 
-if __name__ == '__main__':
-    logging.info("hello")
+# 命令行选项
+parser = OptionParser()
+parser.add_option('--collect-only', action='store_true', dest='collect_only', help='仅列出所有用例')
+parser.add_option('--rerun-fails', action='store_true', dest='rerun_fails', help='运行上次失败的用例')
+parser.add_option('--testlist', action='store_true', dest='testlist', help='运行test/testlist.txt列表指定用例')
+parser.add_option('--testsuite', action='store', dest='testsuite', help='运行指定的TestSuite')
+parser.add_option('--tag', action='store', dest='tag', help='运行指定tag的用例')
+
+
+(options, args) = parser.parse_args()

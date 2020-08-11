@@ -33,3 +33,5 @@
 [2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 10] 期望结果：{"code ": 1000, "data ": {"age": "18", "name": "\u5927\u767d", "sex": "female"}, "msg ": "\u8c03\u7528\u6210\u529f "}
 [2020-08-03 11:14:16] INFO [log_case_info: case_log.py, 11] 实际结果：{"code ": 1000, "data ": {"age": "18", "name": "大白", "sex": "female"}, "msg ": "调用成功 "}
 [2020-08-03 11:18:30] INFO [<module>: config.py, 48] hello
+
+

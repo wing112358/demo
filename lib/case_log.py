@@ -1,4 +1,6 @@
 from config.config import *
+import sys
+sys.path.append('..')
 import json
 
 def log_case_info(case_name, url, expect_res, res_text,data=None):
